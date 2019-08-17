@@ -30,5 +30,21 @@ this.itemService.getItemList().then(res=>this.itemList=res as Item[]);
       Total:0
     }
   }
-
+updatePrice(ctrl)
+{
+  debugger;
+  if(ctrl.SelectedIndex==0)
+  {
+this.formData.Price=0;
+this.formData.ItemName="";
+  }
+  else{
+    this.formData.Price=this.itemList[ctrl.selectedIndex-1].Price;
+    this.formData.ItemName=this.itemList[ctrl.SelectedIndex-1].Name;
+  }
+}
+updateTotal()
+{
+  this.formData.Total=this.formData.Price*this.formData.Quantity;
+}
 }
