@@ -1,0 +1,39 @@
+<h5 class="display-4">Sipariş Edilen Ürün Bilgisi</h5>
+<hr />
+<form #form="ngForm" autocomplete="off">
+    <div class="form-group">
+        <label>Sipariş Ürün</label>
+        <select name="ItemID" #ItemID="ngModel" [(ngModel)]="formData.ItemID" class="form-control">
+            <option value="0">-Seçim-</option>
+            <option *ngFor="let item of itemList" value="{{item.ItemID}}">{{item.Name}}</option>
+        </select>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Fiyat</label>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">₺</div>
+                </div>
+                <input name="Price" #Price="ngModel" [(ngModel)]="formData.Price" class="form-control" />
+            </div>
+        </div>
+        <div class="form-group col-md-6">
+            <label>Miktar</label>
+            <input name="Quantity" #Quantity="ngModel" [(ngModel)]="formData.Quantity" class="form-control" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Toplam</label>
+        <input name="Total" #Total="ngModel" [(ngModel)]="formData.Total" class="form-control" />
+    </div>
+    <div class="form-group">
+            <button type="button" class="btn btn-outline-dark float-right ml-1">
+                    <i class="fa fa-close"></i> İptal
+                </button>
+        <button type="submit" class="btn btn-dark float-right">
+            <i class="fa fa-database"></i> Gönder
+        </button>
+       
+    </div>
+</form>
