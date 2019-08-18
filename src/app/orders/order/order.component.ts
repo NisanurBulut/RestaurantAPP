@@ -3,6 +3,8 @@ import { OrderService } from 'src/app/shared/order.service';
 import { NgForm } from '@angular/forms';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { OrderItemsComponent } from '../order-items/order-items.component';
+import { CustomerService } from 'src/app/shared/customer.service';
+import { Customer } from 'src/app/shared/customer.model';
 
 
 @Component({
@@ -11,10 +13,11 @@ import { OrderItemsComponent } from '../order-items/order-items.component';
   styles: []
 })
 export class OrderComponent implements OnInit {
-
-  constructor(private service: OrderService, private dialog: MatDialog) { }
+customerList:Customer[];
+  constructor(private service: OrderService, private dialog: MatDialog, private customerService:CustomerService) { }
 
   ngOnInit() {
+    this.customerService.getCustomerList().then(res=>this.customerList as Customer[]);
     this.resetForm();
   }
   resetForm(form?: NgForm) {
@@ -32,15 +35,25 @@ export class OrderComponent implements OnInit {
   }
 
   AddOrEditOrderItem(OrderItemIndex, OrderID) {
-    debugger;
     const dialogconfig = new MatDialogConfig();
     dialogconfig.autoFocus = true;
     dialogconfig.disableClose = true;
     dialogconfig.width = "50%";
     dialogconfig.data = { OrderItemIndex, OrderID };
-    this.dialog.open(OrderItemsComponent, dialogconfig);
+    this.dialog.open(OrderItemsComponent, dialogconfig).afterClosed().subscribe(res=>{
+      this.updateGrandTotal();
+    });
   }
   onDeleteOrderItem(orderItemID:number,i:number){
     this.service.orderItems.splice(i,1);
+    this.updateGrandTotal();
   }
+
+  updateGrandTotal(){
+   this.service.formData.GTotal = this.service.orderItems.reduce((prev,curr)=>{
+      return prev+curr.Total;
+    },0)
+    this.service.formData.GTotal = parseFloat((this.service.formData.GTotal).toFixed(2));
+  }
+  
 }

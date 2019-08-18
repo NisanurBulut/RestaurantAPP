@@ -15,6 +15,7 @@
         <label>Müşteri</label>
         <select name="CustomerID" #CustomerID="ngModel" [(ngModel)]="service.formData.CustomerID" class="form-control">
           <option value="0">-Seçin-</option>
+          <option *ngFor="let item of customerList" value="{{item.CustomerID}}">{{item.Name}}</option>
         </select>
       </div>
     </div>
