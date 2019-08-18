@@ -6,7 +6,7 @@
         <input type="hidden"  name="ItemName" #ItemName="ngModel" [(ngModel)]="formData.ItemName">
     <div class="form-group">
         <label>Sipariş Ürün</label>
-        <select name="ItemID" #ItemID="ngModel" [(ngModel)]="formData.ItemID" class="form-control" (change)="updatePrice($event.target)">
+        <select name="ItemID" #ItemID="ngModel" [(ngModel)]="formData.ItemID" class="form-control" (change)="updatePrice($event.target)" [class.is-invalid]="!isValid && formData.ItemID==0">
             <option value="0">-Seçim-</option>
             <option *ngFor="let item of itemList" value="{{item.ItemID}}">{{item.Name}}</option>
         </select>
@@ -23,7 +23,7 @@
         </div>
         <div class="form-group col-md-6">
             <label>Miktar</label>
-            <input name="Quantity" #Quantity="ngModel" [(ngModel)]="formData.Quantity" class="form-control" (keyup)="updateTotal()"/>
+            <input name="Quantity" #Quantity="ngModel" [(ngModel)]="formData.Quantity" class="form-control" (keyup)="updateTotal()" [class.is-invalid]="!isValid && formData.Quantity==0" />
         </div>
     </div>
     <div class="form-group">

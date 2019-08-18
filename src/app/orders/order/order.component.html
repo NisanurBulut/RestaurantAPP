@@ -65,6 +65,7 @@
       <td>{{item.Total}}</td>
       <td>
           <button class="btn btn-sm btn-info text-white" (click)="AddOrEditOrderItem(i,service.formData.OrderID)"><i class="fa fa-pencil"></i></button>
+          <button class="btn btn-sm btn-danger text-white ml-1" (click)="onDeleteOrderItem(item.OrderItemID,i)"><i class="fa fa-trash"></i></button>
       </td>
     </tr>
   </tbody>

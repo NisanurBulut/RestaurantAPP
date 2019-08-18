@@ -18,16 +18,17 @@ export class OrderComponent implements OnInit {
     this.resetForm();
   }
   resetForm(form?: NgForm) {
+    debugger;
     if (form = null)
-      form.resetForm();
-    this.service.formData = {
-      OrderID: null,
-      OrderNo: Math.floor(100000 + Math.random() * 900000).toString(),
-      CustomerID: 0,
-      PMethod: '',
-      GTotal: 0
-    };
-    this.service.orderItems = [];
+    form.resetForm();
+  this.service.formData = {
+    OrderID: null,
+    OrderNo: Math.floor(100000 + Math.random() * 900000).toString(),
+    CustomerID: 0,
+    PMethod: '',
+    GTotal: 0
+  };
+  this.service.orderItems = [];
   }
 
   AddOrEditOrderItem(OrderItemIndex, OrderID) {
@@ -38,5 +39,8 @@ export class OrderComponent implements OnInit {
     dialogconfig.width = "50%";
     dialogconfig.data = { OrderItemIndex, OrderID };
     this.dialog.open(OrderItemsComponent, dialogconfig);
+  }
+  onDeleteOrderItem(orderItemID:number,i:number){
+    this.service.orderItems.splice(i,1);
   }
 }
