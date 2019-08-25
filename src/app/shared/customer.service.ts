@@ -8,8 +8,7 @@ import { environment } from 'src/environments/environment';
 export class CustomerService {
 
   constructor(private http:HttpClient) { }
-  getCustomerList(){
-    console.log(this.http.get(environment.apiURL+'/Customer').toPromise())
+  getCustomerList(){  
     return this.http.get(environment.apiURL+'/Customer').toPromise();
   }
 }
