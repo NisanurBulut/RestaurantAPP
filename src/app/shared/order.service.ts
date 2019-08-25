@@ -24,4 +24,10 @@ orderItems:OrderItem[];
   getOrderList(){  
     return this.http.get(environment.apiURL+'/Order').toPromise();
   }
+  getOrderByID(id:number):any{  
+    return this.http.get(environment.apiURL+'/Order/'+id).toPromise();
+  }
+  deleteOrder(id:number):any{  
+    return this.http.delete(environment.apiURL+'/Order/'+id).toPromise();
+  }
 }

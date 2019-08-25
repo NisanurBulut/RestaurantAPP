@@ -1,4 +1,5 @@
 <form #form="ngForm" autocomplete="off" *ngIf="service.formData" (submit)="onSubmit(form)">
+ <input  type="hidden" name="OrderID" #OrderID="ngModel" [(ngModel)]="service.formData.OrderID">
   <div class="row">
     <div class="col-md-6">
       <div class="form-group">
@@ -25,7 +26,7 @@
         <label>Ödeme Şekli</label>
         <select name="PMethod" #PMethod="ngModel" [(ngModel)]="service.formData.PMethod" class="form-control">
           <option value="">-Seçin-</option>
-          <option value="Cash">Nakit</option>
+          <option value="Nakit">Nakit</option>
           <option value="Card">Kart</option>
         </select>
       </div>
@@ -76,5 +77,6 @@
     <button type="submit" class="btn btn-dark float-right">
       <i class="fa fa-database"></i> Gönder
     </button>
+    <a class="btn btn-outline-dark" routerLink="/orders"><i class="fa fa-table"></i> Siparişleri Gör</a>
   </div>
 </form>
