@@ -13,7 +13,8 @@
       </div>
       <div class="form-group">
         <label>Müşteri</label>
-        <select name="CustomerID" #CustomerID="ngModel" [(ngModel)]="service.formData.CustomerID" class="form-control">
+        <select name="CustomerID" #CustomerID="ngModel" [(ngModel)]="service.formData.CustomerID" class="form-control" class="form-control"
+        [class.is-invalid]="!isValid && service.formData.CustomerID==0">
           <option value="0">-Seçin-</option>
           <option *ngFor="let item of customerList" value="{{item.CustomerID}}">{{item.Name}}</option>
         </select>
@@ -53,7 +54,7 @@
     </th>
   </thead>
   <tbody>
- <tr *ngIf="service.orderItems.length==0">
+ <tr *ngIf="service.orderItems.length==0" [class.text-danger]="!isValid && service.orderItems.length==0">
    <td class="font-italic text-center" colspan="5">
      Gösterilecek ürün bilgisi bulunamamıştır.
    </td>
