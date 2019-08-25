@@ -5,6 +5,8 @@ import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { OrderItemsComponent } from '../order-items/order-items.component';
 import { CustomerService } from 'src/app/shared/customer.service';
 import { Customer } from 'src/app/shared/customer.model';
+import { ToastrService } from 'ngx-toastr';
+import { Router } from '@angular/router';
 
 
 
@@ -19,11 +21,12 @@ export class OrderComponent implements OnInit {
 
   constructor(private service: OrderService,
     private dialog: MatDialog,
-    private customerService: CustomerService
+    private customerService: CustomerService,
+    private toastr:ToastrService,
+    private router:Router
     ) { }
 
   ngOnInit() {
-  
   
       this.resetForm();
   
@@ -86,6 +89,8 @@ export class OrderComponent implements OnInit {
       this.service
       .saveOrUpdateOrder().subscribe(res=>{
       this.resetForm();
+      this.toastr.success("İşlem başarıyla gerçekleştirilmiştir.","Restoran Uygulaması");
+      this.router.navigate(['/orders'])
       });
     }
   }
