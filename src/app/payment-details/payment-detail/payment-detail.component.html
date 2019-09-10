@@ -21,29 +21,36 @@
             class="form-control" placeholder="Kart Numarası">
         </div>
     </div>
-    <div class="form-group">
-            <div class="input-group">
-                <div class="input-group-prepend">
-                    <div class="input-group-text bg-white">
-                       <i class="fa fa-calendar"></i>
-                    </div>
-                </div>
-                <input name="ExpirationDate" #ExpirationDate="ngModel" 
-                [(ngModel)]="formData.ExpirationDate"
-                class="form-control" placeholder="Son Geçerlilik Zamanı">
-            </div>
-        </div>
-        <div class="form-group">
-                <div class="input-group">
-                    <div class="input-group-prepend">
-                        <div class="input-group-text bg-white">
-                           <i class="fa fa-key"></i>
+    <div class="form-row">
+    <div class="form-group col-md-7">
+           
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text bg-white">
+                               <i class="fa fa-calendar"></i>
+                            </div>
                         </div>
+                        <input name="ExpirationDate" #ExpirationDate="ngModel" 
+                        [(ngModel)]="formData.ExpirationDate"
+                        class="form-control" placeholder="MM/YYgit pu">
                     </div>
-                    <input type="password" name="CVV" #CVV="ngModel" [(ngModel)]="formData.CVV"
-                    class="form-control" placeholder="CCV">
                 </div>
-            </div>
+   
+    <div class="form-group col-md-5">
+          
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text bg-white">
+                               <i class="fa fa-key"></i>
+                            </div>
+                        </div>
+                        <input type="password" name="CVV" #CVV="ngModel" [(ngModel)]="formData.CVV"
+                        class="form-control" placeholder="CCV">
+                    </div>
+                
+        </div>
+    
+    </div>
             <div class="form-group">
                 <button class="btn btn-success btn-lg btn-block" type="submit"><i class="fa fa-database"></i> Gönder</button>
             </div>
