@@ -7,6 +7,13 @@
 |   |  +--● order-items
 |   |  |  |--order-items.component.ts|.html|.css
 |   |  |
+|   +--● payment-details
+|   |  |--payment-details.component.ts|.html|.css
+|   |  +--● payment-detail
+|   |  |  |--payment-detail.component.ts|.html|.css
+|   |  +--● payment-detail-list
+|   |  |  |--payment-detail-list.component.ts|.html|.css
+|   |  |
 |   |  +--● shared
 |   |     |--customer.model.ts
 |   |     |--customer.service.ts  
@@ -14,7 +21,9 @@
 |   |     |--item.service.ts 
 |   |     |--order-item.model.ts
 |   |     |--order.model.ts
-|   |     |--order.service.ts  
+|   |     |--order.service.ts 
+|   |     |--payment-detail.service.ts 
+|   |     |--payment-detail-model.ts 
 |   |
 |   |--app.module.ts
 |

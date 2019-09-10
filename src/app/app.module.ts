@@ -16,8 +16,8 @@ import { OrderService } from './shared/order.service';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from "@angular/common/http";
 import { PaymentDetailsComponent } from './payment-details/payment-details.component';
-import { PaymentDetailComponent } from './payment-detals/payment-detail/payment-detail.component';
-import { PaymentDetailListComponent } from './payment-detals/payment-detail-list/payment-detail-list.component';
+import { PaymentDetailComponent } from './payment-details/payment-detail/payment-detail.component';
+import { PaymentDetailListComponent } from './payment-details/payment-detail-list/payment-detail-list.component';
 
 @NgModule({
   declarations: [
