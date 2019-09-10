@@ -15,12 +15,19 @@ import { OrderItemsComponent } from './orders/order-items/order-items.component'
 import { OrderService } from './shared/order.service';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from "@angular/common/http";
+import { PaymentDetailsComponent } from './payment-details/payment-details.component';
+import { PaymentDetailComponent } from './payment-detals/payment-detail/payment-detail.component';
+import { PaymentDetailListComponent } from './payment-detals/payment-detail-list/payment-detail-list.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     OrdersComponent,
     OrderComponent,
-    OrderItemsComponent
+    OrderItemsComponent,
+    PaymentDetailsComponent,
+    PaymentDetailComponent,
+    PaymentDetailListComponent
   ],
   imports: [
     BrowserModule,
