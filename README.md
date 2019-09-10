@@ -1,4 +1,4 @@
-#Angular 8.1.1
+#Angular 8.1.1<br/>
 =>Bir restoran yönetim uygulamasıdır.<br/>
 =>Sipariş seçimi işlemlerine dayanır.<br/>
 =>Seçilen yiyeceğin adedine göre fiyatlandırması yapılır.<br/>
