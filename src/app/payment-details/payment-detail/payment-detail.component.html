@@ -1,57 +1,51 @@
 <form #form="ngForm" autocomplete="off">
-<div class="form-group">
-    <div class="input-group">
-        <div class="input-group-prepend">
-            <div class="input-group-text bg-white">
-               <i class="fa fa-user"></i>
-            </div>
-        </div>
-        <input name="CardOwnerName" #CardOwnerName="ngModel" [(ngModel)]="formData.CardOwnerName"
-        class="form-control" placeholder="Kart Sahibi">
-    </div>
-</div>
-<div class="form-group">
+    <div class="form-group">
         <div class="input-group">
             <div class="input-group-prepend">
                 <div class="input-group-text bg-white">
-                   <i class="fa fa-credit-card"></i>
+                    <i class="fa fa-user"></i>
                 </div>
             </div>
-            <input name="CardNumber" #CardNumber="ngModel" [(ngModel)]="formData.CardNumber"
-            class="form-control" placeholder="Kart Numarası">
+            <input name="CardOwnerName" #CardOwnerName="ngModel" [(ngModel)]="formData.CardOwnerName"
+                class="form-control" placeholder="Kart Sahibi">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text bg-white">
+                    <i class="fa fa-credit-card"></i>
+                </div>
+            </div>
+            <input name="CardNumber" #CardNumber="ngModel" [(ngModel)]="formData.CardNumber" class="form-control"
+                placeholder="16 Hane Kart Numarası" required maxlength="16" minlenght="16">
         </div>
     </div>
     <div class="form-row">
-    <div class="form-group col-md-7">
-           
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                            <div class="input-group-text bg-white">
-                               <i class="fa fa-calendar"></i>
-                            </div>
-                        </div>
-                        <input name="ExpirationDate" #ExpirationDate="ngModel" 
-                        [(ngModel)]="formData.ExpirationDate"
-                        class="form-control" placeholder="MM/YYgit pu">
+        <div class="form-group col-md-7">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text bg-white">
+                        <i class="fa fa-calendar"></i>
                     </div>
                 </div>
-   
-    <div class="form-group col-md-5">
-          
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                            <div class="input-group-text bg-white">
-                               <i class="fa fa-key"></i>
-                            </div>
-                        </div>
-                        <input type="password" name="CVV" #CVV="ngModel" [(ngModel)]="formData.CVV"
-                        class="form-control" placeholder="CCV">
-                    </div>
-                
-        </div>
-    
-    </div>
-            <div class="form-group">
-                <button class="btn btn-success btn-lg btn-block" type="submit"><i class="fa fa-database"></i> Gönder</button>
+                <input name="ExpirationDate" #ExpirationDate="ngModel" [(ngModel)]="formData.ExpirationDate"
+                    class="form-control" placeholder="MM/YY" required maxlength="5" minlenght="5">
             </div>
+        </div>
+        <div class="form-group col-md-5">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text bg-white">
+                        <i class="fa fa-key"></i>
+                    </div>
+                </div>
+                <input type="password" name="CVV" #CVV="ngModel" [(ngModel)]="formData.CVV" class="form-control"
+                    placeholder="CCV" required maxlength="3" minlenght="3">
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <button class="btn btn-success btn-lg btn-block" type="submit"><i class="fa fa-database"></i> Gönder</button>
+    </div>
 </form>
