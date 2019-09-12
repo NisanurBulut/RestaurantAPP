@@ -16,6 +16,6 @@ export class PaymentDetailListComponent implements OnInit {
   }
   populateForm(pd:PaymentDetail)
   {
-    this.service.formData=pd;
+    this.service.formData=Object.assign({},pd);
   }
 }

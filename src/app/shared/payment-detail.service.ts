@@ -9,9 +9,13 @@ export class PaymentDetailService {
   formData: PaymentDetail;
   list:PaymentDetail[];
   constructor(private http:HttpClient) { }
-  postPaymentDetail(formData:PaymentDetail)
+  postPaymentDetail()
   {
-    return this.http.post(environment.apiURL+'/PaymentDetails',formData);
+    return this.http.post(environment.apiURL+'/PaymentDetails',this.formData);
+  }
+  putPaymentDetail()
+  {
+    return this.http.put(environment.apiURL+'/PaymentDetails/'+this.formData.PMId,this.formData);
   }
   refreshList(){
     return this.http.get(environment.apiURL+'/PaymentDetails')

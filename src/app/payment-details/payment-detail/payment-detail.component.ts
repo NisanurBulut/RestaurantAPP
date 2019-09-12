@@ -38,7 +38,7 @@ export class PaymentDetailComponent implements OnInit {
   }
 
   insertRecord(form: NgForm) {
-    this.service.postPaymentDetail(form.value).subscribe(
+    this.service.postPaymentDetail().subscribe(
       res=>{
         this.resetForm(form);
         this.toastr.success('İşlem Başarılı','Ödeme Bilgileri tanımlanmıştır.');
@@ -49,7 +49,15 @@ export class PaymentDetailComponent implements OnInit {
     )
   }
   updateRecord(form: NgForm) {
-    
+    this.service.putPaymentDetail().subscribe(
+      res=>{
+        this.resetForm(form);
+        this.toastr.success('İşlem Başarılı','Ödeme Bilgileri güncellenmiştir.');
+      },
+      err=>{
+        this.toastr.error('İşlem Başarısız','İstenmeyen bir hata ile karşılaşıldı.');
+      }
+    )
   }
 
 }
