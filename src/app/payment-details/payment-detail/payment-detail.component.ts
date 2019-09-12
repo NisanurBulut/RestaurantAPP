@@ -42,6 +42,7 @@ export class PaymentDetailComponent implements OnInit {
       res=>{
         this.resetForm(form);
         this.toastr.success('İşlem Başarılı','Ödeme Bilgileri tanımlanmıştır.');
+        this.service.refreshList();
       },
       err=>{
         this.toastr.error('İşlem Başarısız','İstenmeyen bir hata ile karşılaşıldı.');
@@ -53,6 +54,7 @@ export class PaymentDetailComponent implements OnInit {
       res=>{
         this.resetForm(form);
         this.toastr.success('İşlem Başarılı','Ödeme Bilgileri güncellenmiştir.');
+        this.service.refreshList();
       },
       err=>{
         this.toastr.error('İşlem Başarısız','İstenmeyen bir hata ile karşılaşıldı.');
