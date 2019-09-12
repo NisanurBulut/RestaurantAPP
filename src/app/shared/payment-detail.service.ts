@@ -17,9 +17,14 @@ export class PaymentDetailService {
   {
     return this.http.put(environment.apiURL+'/PaymentDetails/'+this.formData.PMId,this.formData);
   }
+  deletePaymentDetail(id)
+  {
+    return this.http.delete(environment.apiURL+'/PaymentDetails/'+id);
+  }
   refreshList(){
     return this.http.get(environment.apiURL+'/PaymentDetails')
     .toPromise()
     .then(res=>this.list=res as PaymentDetail[]);
   }
+
 }
