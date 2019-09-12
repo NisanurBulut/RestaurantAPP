@@ -1,1 +1,8 @@
-Listeleme!
+<table class="table table-hover">
+    <tr *ngFor="let pd of service.list">
+   <td (click)="populateForm(pd)"> {{pd.CardOwnerName}}</td>
+   <td (click)="populateForm(pd)"> {{pd.CarNumber}}</td>
+   <td (click)="populateForm(pd)">{{pd.CVV}}</td>
+   <td (click)="populateForm(pd)">{{pd.ExpirationDate}}</td>
+    </tr>
+</table>

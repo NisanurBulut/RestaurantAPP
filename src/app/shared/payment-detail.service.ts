@@ -7,13 +7,15 @@ import { environment } from '../../environments/environment';
 })
 export class PaymentDetailService {
   formData: PaymentDetail;
-  
+  list:PaymentDetail[];
   constructor(private http:HttpClient) { }
   postPaymentDetail(formData:PaymentDetail)
   {
     return this.http.post(environment.apiURL+'/PaymentDetails',formData);
   }
   refreshList(){
-    return this.http.get(environment.apiURL+'PaymentDetails').toPromise();
+    return this.http.get(environment.apiURL+'/PaymentDetails')
+    .toPromise()
+    .then(res=>this.list=res as PaymentDetail[]);
   }
 }
