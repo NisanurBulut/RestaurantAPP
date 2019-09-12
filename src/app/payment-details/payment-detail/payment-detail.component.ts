@@ -32,7 +32,7 @@ export class PaymentDetailComponent implements OnInit {
 
   onSubmit(form: NgForm) {
     if (this.service.formData.PMId == 0)
-      this.insertRecord(form);
+      this.insertRecord(form);    
     else
       this.updateRecord(form);
   }
@@ -41,9 +41,10 @@ export class PaymentDetailComponent implements OnInit {
     this.service.postPaymentDetail(form.value).subscribe(
       res=>{
         this.resetForm(form);
+        this.toastr.success('İşlem Başarılı','Ödeme Bilgileri tanımlanmıştır.');
       },
       err=>{
-        console.log(err);
+        this.toastr.error('İşlem Başarısız','İstenmeyen bir hata ile karşılaşıldı.');
       }
     )
   }

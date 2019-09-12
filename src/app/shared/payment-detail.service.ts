@@ -13,4 +13,7 @@ export class PaymentDetailService {
   {
     return this.http.post(environment.apiURL+'/PaymentDetails',formData);
   }
+  refreshList(){
+    return this.http.get(environment.apiURL+'PaymentDetails').toPromise();
+  }
 }
