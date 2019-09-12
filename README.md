@@ -6,4 +6,6 @@
 =>Siparişler listelenir.<br/>
 =>Sipariş detayları görüntülenir.<br/>
 =>Siparişler üzerinde ekle sil düzenle işlemleri yapılabilir.<br/>
-=>Ödeme bilgilerinin kaydedilmesi gerçekleştiririlir.<br/>
+=>Ödeme bilgilerinin ekle/sil/düzenle gerçekleştiririlir.<br/>
+=>Ödeme bilgilerinin listelemesi gerçekleştiririlir.<br/>
+
