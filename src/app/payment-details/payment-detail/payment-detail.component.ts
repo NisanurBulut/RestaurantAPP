@@ -38,7 +38,14 @@ export class PaymentDetailComponent implements OnInit {
   }
 
   insertRecord(form: NgForm) {
-    
+    this.service.postPaymentDetail(form.value).subscribe(
+      res=>{
+        this.resetForm(form);
+      },
+      err=>{
+        console.log(err);
+      }
+    )
   }
   updateRecord(form: NgForm) {
     
