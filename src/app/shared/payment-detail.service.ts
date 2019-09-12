@@ -1,10 +1,9 @@
 import { Injectable } from '@angular/core';
-import { PaymentDetail } from './payment-detail-model';
-
+import { PaymentDetail } from './payment-detail.model';
 @Injectable({
   providedIn: 'root'
 })
 export class PaymentDetailService {
-formData:PaymentDetail;
+  formData: PaymentDetail;
   constructor() { }
 }
