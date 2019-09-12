@@ -6,4 +6,8 @@ import { PaymentDetail } from './payment-detail.model';
 export class PaymentDetailService {
   formData: PaymentDetail;
   constructor() { }
+  postPaymentDetail(form:PaymentDetail)
+  {
+    
+  }
 }

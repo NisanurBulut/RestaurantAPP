@@ -8,7 +8,7 @@
           </div>
         </div>
         <input name="CardOwnerName" #CardOwnerName="ngModel" [(ngModel)]="service.formData.CardOwnerName" class="form-control"
-          placeholder="Card Owner Name" required>
+          placeholder="Kart Sahibi" required>
       </div>
     </div>
     <div class="form-group">
@@ -19,7 +19,7 @@
           </div>
         </div>
         <input name="CardNumber" #CardNumber="ngModel" [(ngModel)]="service.formData.CardNumber" 
-        class="form-control" placeholder="16 Digit Card Number" required maxlength="16" minlength="16">
+        class="form-control" placeholder="16 Haneli Kart Numarası" required maxlength="16" minlength="16">
       </div>
     </div>
     <div class="form-row">
@@ -47,6 +47,6 @@
       </div>
     </div>
     <div class="form-group">
-      <button class="btn btn-success btn-lg btn-block" type="submit" [disabled]="form.invalid"><i class="fa fa-database"></i> Submit</button>
+      <button class="btn btn-success btn-lg btn-block" type="submit" [disabled]="form.invalid"><i class="fa fa-database"></i> Gönder</button>
     </div>
   </form>
