@@ -19,6 +19,13 @@ import { PaymentDetailsComponent } from './payment-details/payment-details.compo
 import { PaymentDetailComponent } from './payment-details/payment-detail/payment-detail.component';
 import { PaymentDetailListComponent } from './payment-details/payment-detail-list/payment-detail-list.component';
 import { PaymentDetailService } from './shared/payment-detail.service';
+import { MainNavComponent } from './main-nav/main-nav.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -28,7 +35,8 @@ import { PaymentDetailService } from './shared/payment-detail.service';
     OrderItemsComponent,
     PaymentDetailsComponent,
     PaymentDetailComponent,
-    PaymentDetailListComponent
+    PaymentDetailListComponent,
+    MainNavComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +47,13 @@ import { PaymentDetailService } from './shared/payment-detail.service';
     ToastrModule.forRoot(),
     MatDialogModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule
     
   ],
   entryComponents:[OrderItemsComponent],
