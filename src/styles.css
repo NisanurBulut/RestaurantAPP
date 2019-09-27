@@ -1,7 +1,9 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
 .jumbotron {
   padding-top: 0px;
   background: #fff;
+  height: 100%;
 }
 .form-control,
 .input-group-text {

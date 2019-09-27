@@ -19,7 +19,6 @@ import { PaymentDetailsComponent } from './payment-details/payment-details.compo
 import { PaymentDetailComponent } from './payment-details/payment-detail/payment-detail.component';
 import { PaymentDetailListComponent } from './payment-details/payment-detail-list/payment-detail-list.component';
 import { PaymentDetailService } from './shared/payment-detail.service';
-import { MainNavComponent } from './main-nav/main-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
@@ -35,8 +34,7 @@ import { MatListModule } from '@angular/material/list';
     OrderItemsComponent,
     PaymentDetailsComponent,
     PaymentDetailComponent,
-    PaymentDetailListComponent,
-    MainNavComponent
+    PaymentDetailListComponent
   ],
   imports: [
     BrowserModule,
@@ -54,7 +52,6 @@ import { MatListModule } from '@angular/material/list';
     MatSidenavModule,
     MatIconModule,
     MatListModule
-    
   ],
   entryComponents:[OrderItemsComponent],
   providers: [OrderService,PaymentDetailService],

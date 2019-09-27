@@ -1,6 +1,26 @@
-<app-main-nav></app-main-nav>
-<div class="jumbotron jumbtron-fluid"> 
+
+<!-- <div class="jumbotron jumbtron-fluid"> 
   <div class="container">
         <router-outlet></router-outlet>
   </div>
-</div>
+</div> -->
+
+<mat-sidenav-container>
+  
+  <mat-sidenav #sidenav (opened)="log('Opened')" (closed)="log('Closed')" mode="side" [(opened)]="opened">
+      <mat-nav-list>
+          <a mat-list-item routerLink="/orders"><i class="fa fa-table"></i> Siparişleri Gör</a>
+          <a mat-list-item routerLink="/paymentdetails"><i class="fa fa-save"></i> Ödeme Bilgisi Oluştur</a>
+          <a mat-list-item (click)="sidenav.toggle()" href="" mat-list-item>Close</a>
+        </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>  
+    <button (click)="sidenav.toggle()"><i class="fa fa-bars"></i></button>
+    <span class="display-4 text-center"><img src="../assets/img/food.png" alt="">Restoran Uygulaması</span>
+    <div class="jumbotron jumbtron-fluid"> 
+        <div class="container"> 
+              <router-outlet></router-outlet>
+        </div>
+      </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
