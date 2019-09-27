@@ -1,5 +1,8 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
-
+html, 
+body {
+    height: 100%;
+}
 .jumbotron {
   padding-top: 0px;
   background: #fff;

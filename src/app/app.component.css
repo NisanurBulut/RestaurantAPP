@@ -6,6 +6,6 @@ mat-sidenav,mat-sidenav-content{
     padding: 16px;
 }
 mat-sidenav{
-    background-color: lightcoral;
+    background-color:#ff4081;
     width: 200px;
 }
