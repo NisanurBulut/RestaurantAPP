@@ -1,13 +1,13 @@
 # Ana Ekran Görüntüsü
-![](src\assets\Tanitim\AnaGoruntu.JPG)
+![AnaGoruntu](src\assets\Tanitim\AnaGoruntu.JPG)
 
 * Ana ekranda kullanıcıyı sipariş verebileceği bir form karşılar. 
 * Bu form içerisinde ki sipariş numarası unique bir değerdir.Otamatik olarak oluşturulur ve readonly durumdadır.
 * Kullanıcı siparişin sahibi olan müşteriyi ve müşterinin ödeme şeklini seçebilir.
 
-    ![](src\assets\Tanitim\AnaGoruntu2.JPG)
+    ![AnaGoruntu2](src\assets\Tanitim\AnaGoruntu2.JPG)
 
-    ![](src\assets\Tanitim\AnaGoruntu3.JPG)
+    ![AnaGoruntu3](src\assets\Tanitim\AnaGoruntu3.JPG)
 * Sipariş edilecek olan yiyeceğim miktarı değiştikçe ödenecek toplam tutarda otomatik olarak hesaplanır ve bu bilgi ana ekrana düşer.
 
 
