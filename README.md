@@ -8,4 +8,4 @@
 =>Siparişler üzerinde ekle sil düzenle işlemleri yapılabilir.<br/>
 =>Ödeme bilgilerinin ekle/sil/düzenle gerçekleştiririlir.<br/>
 =>Ödeme bilgilerinin listelemesi gerçekleştiririlir.<br/>
-
+![açılış ekranı bu şekildedir.](2019-09-28-21-55-06.png)
