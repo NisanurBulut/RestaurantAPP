@@ -1,26 +1,19 @@
 # Ana Ekran Görüntüsü
-<<<<<<< HEAD
 ![AnaGoruntu](src\assets\Tanitim\AnaGoruntu.JPG)
-=======
-![AnaGoruntu](src\assets\Tanitim\AnaGoruntu.jpg)
->>>>>>> 7523c9bda4300e0818985c159a34c84ef7a41dbd
 
 * Ana ekranda kullanıcıyı sipariş verebileceği bir form karşılar. 
 * Bu form içerisinde ki sipariş numarası unique bir değerdir.Otamatik olarak oluşturulur ve readonly durumdadır.
 * Kullanıcı siparişin sahibi olan müşteriyi ve müşterinin ödeme şeklini seçebilir.
 
-<<<<<<< HEAD
-    ![AnaGoruntu2](src\assets\Tanitim\AnaGoruntu2.JPG)
-=======
-    ![](src\assets\Tanitim\AnaGoruntu2.jpg)
->>>>>>> 7523c9bda4300e0818985c159a34c84ef7a41dbd
+    ![AnaGoruntu2](src\assets\Tanitim\AnaGoruntu2.jpg)
+
 
     ![AnaGoruntu3](src\assets\Tanitim\AnaGoruntu3.JPG)
 * Sipariş edilecek olan yiyeceğim miktarı değiştikçe ödenecek toplam tutarda otomatik olarak hesaplanır ve bu bilgi ana ekrana düşer.
 
 
 * Yeni sipariş oluşturmak için küçük yeşil button 
-![](src\assets\Tanitim\btn.JPG) kullanılır. 
+![btn](src\assets\Tanitim\btn.JPG) kullanılır. 
 
 * Açılan mini formda yiyecek ve miktarı seçilir.
 
