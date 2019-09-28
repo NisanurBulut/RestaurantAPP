@@ -1,5 +1,5 @@
 # Ana Ekran Görüntüsü
-![](src\assets\Tanitim\AnaGoruntu.JPG)
+![](https://github.com/NisanurBulut/RestaurantAPP/src/assets/Tanitim/AnaGoruntu.JPG)
 
 * Ana ekranda kullanıcıyı sipariş verebileceği bir form karşılar. 
 * Bu form içerisinde ki sipariş numarası unique bir değerdir.Otamatik olarak oluşturulur ve readonly durumdadır.
