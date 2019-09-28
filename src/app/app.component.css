@@ -1,13 +1,24 @@
 
 mat-sidenav-container{
-    height: 100%;
-    background-color: #ff408034;
+    height: 100%; 
 }
-
+.mat-toolbar{
+    background-color: #cfd8dc;
+}
+.mat-toolbar>button{
+    background-color: #78909c;
+}
+mat-sidenav-content{ 
+    background-color: #808e95;
+}
 mat-sidenav,mat-sidenav-content{
     padding: 16px;
 }
 mat-sidenav{
-    background-color:#ff408034;
-    width: 200px;
+    width: 220px;
+    background-color:  #eceff1;
+}
+mat-nav-list>a{
+    font-size: 12px;
+    text-align:left;
 }

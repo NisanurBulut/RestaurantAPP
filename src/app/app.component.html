@@ -1,14 +1,14 @@
-<mat-sidenav-container mat-dark-theme>
+<mat-sidenav-container>
   <mat-sidenav #sidenav (opened)="log('Opened')" (closed)="log('Closed')" mode="side" [(opened)]="opened">
       <mat-nav-list>
           <a mat-list-item routerLink="/orders"><b><i class="fa fa-table"></i> Siparişleri Gör</b></a>
           <a mat-list-item routerLink="/paymentdetails"><b><i class="fa fa-save"></i> Ödeme Bilgisi Oluştur</b></a>
-          <a mat-list-item (click)="sidenav.toggle()" href="" mat-list-item>Kapat</a>
+          <a mat-list-item (click)="sidenav.toggle()" href="" mat-list-item><i class="fa fa-close"> Çıkış</i></a>
         </mat-nav-list>
   </mat-sidenav>
-  <mat-sidenav-content>  
-    <mat-toolbar style="background-color: #ff408034">
-        <button class="btn btn-sm" (click)="sidenav.toggle()" style="background-color: #ff408034" ><i class="fa fa-bars"></i></button>
+  <mat-sidenav-content>   
+    <mat-toolbar>
+        <button class="btn btn-sm" (click)="sidenav.toggle()" ><i class="fa fa-bars"></i></button>
         <span class="display-4 text-center"><img src="../assets/img/food.png" alt="">Restoran Uygulaması</span>
     </mat-toolbar>
     <div class="jumbotron jumbtron-fluid"> 
