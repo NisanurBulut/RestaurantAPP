@@ -1,4 +1,6 @@
-# Ana Ekran Görüntüsü
+# Restoran Uygulaması
+# <b>Uygulama hali hazırda kullanılan bir uygulama olduğu için web API kaynak dosyaları paylaşılmamıştır.</b>
+
 ![AnaGoruntu](https://github.com/NisanurBulut/RestaurantAPP/blob/master/src/assets/Tanitim/AnaGoruntu.JPG)
 
 * Ana ekranda kullanıcıyı sipariş verebileceği bir form karşılar. 
