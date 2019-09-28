@@ -5,7 +5,7 @@
 * Bu form içerisinde ki sipariş numarası unique bir değerdir.Otamatik olarak oluşturulur ve readonly durumdadır.
 * Kullanıcı siparişin sahibi olan müşteriyi ve müşterinin ödeme şeklini seçebilir.
 
-    ![AnaGoruntu2](https://github.com/NisanurBulut/RestaurantAPP/blob/master/src/assets/Tanitim/AnaGoruntu2.jpg)
+    ![AnaGoruntu2](https://github.com/NisanurBulut/RestaurantAPP/blob/master/src/assets/Tanitim/AnaGoruntu2.JPG)
 
 
     ![AnaGoruntu3](https://github.com/NisanurBulut/RestaurantAPP/blob/master/src/assets/Tanitim/AnaGoruntu3.JPG)
