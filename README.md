@@ -1,5 +1,12 @@
-**1. Ana ekran görüntüsü
-![](2019-09-28-21-55-06.png)
+# Ana Ekran Görüntüsü
+![](src\assets\Tanitim\AnaGoruntu.JPG)
+* Ana ekranda kullanıcıyı sipariş verebileceği bir form karşılar. 
+* Bu form içerisinde ki sipariş numarası unique bir değerdir.Otamatik olarak oluşturulur ve readonly durumdadır.
+* Kullanıcı siparişin sahibi olan müşteriyi ve müşterinin ödeme şeklini seçebilir.
+    ![](src\assets\Tanitim\AnaGoruntu2.JPG)
+    ![](src\assets\Tanitim\AnaGoruntu3.JPG)
+* Sipariş edilecek olan yiyeceğim miktarı değiştikçe ödenecek toplam tutarda otomatik olarak hesaplanır.
+
 
 #Angular 8.1.1<br/>
 =>Bir restoran yönetim uygulamasıdır.<br/>
